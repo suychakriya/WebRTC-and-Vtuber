@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for the chatbox container */
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+/* Styles for the Live2D avatar */
+#live2d-avatar {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  margin-bottom: 20px;
+  /* Add any other necessary styles for positioning, animation, etc. */
+}
+
+#chatbox {
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  max-width: 100%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: height 0.2s;
+}
+
+/* Styles for the messages */
+#messages {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Styles for the input container */
+#input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#user-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: none;
+  overflow: hidden;
+  transition: height 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#send-btn,
+#voice-btn,
+#stop-btn {
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: #006aff;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+#send-btn:hover,
+#voice-btn:hover,
+#stop-btn:hover {
+  transform: scale(1.2);
+}
+
+/* CSS for the home icon */
+#home-icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: #333;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+}
+
+#home-icon:hover {
+  color: #555;
+  cursor: pointer;
+}

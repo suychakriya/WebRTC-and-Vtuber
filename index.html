@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <!--     Live2D SDK  -->
+    <script
+      defer
+      src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"
+    ></script>
+    <!--     PixiJS Renderer -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"
+    ></script>
+    <!--     PixiJS Live2D Plugin -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"
+    ></script>
+    <!--     Mediapipe or Tensorflow.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--     Mediapipe Camera Tools -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--     Kalidokit Kinematic Solver -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/kalidokit@1.1/dist/kalidokit.umd.js"
+    ></script>
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div id="videos">
+      <video class="input_video" id="vid" autoplay muted playsinline></video>
+      <canvas class="video-player" id="user-1"></canvas>
+      <video class="video-player" id="user-2" autoplay playsinline></video>
+    </div>
+
+    <div id="transcript">
+      <p id="message"></p>
+    </div>
+
+    <div id="controls">
+      <div class="control-container" id="refresh-btn">
+        <img src="assets/refresh.svg" />
+      </div>
+
+      <div class="control-container" id="model-btn">
+        <img src="assets/face.svg" />
+      </div>
+
+      <div class="control-container" id="camera-btn">
+        <img src="assets/camera.png" />
+      </div>
+
+      <div class="control-container" id="caption-btn">
+        <img src="assets/caption.svg" />
+      </div>
+
+      <div class="control-container" id="mic-btn">
+        <img src="assets/mic.png" />
+      </div>
+
+      <div class="control-container" id="leave-btn">
+        <img src="assets/phone.png" />
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

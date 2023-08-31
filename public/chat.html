@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chat.css" />
+    <title>Chat With AI</title>
+    <!--     Live2D SDK  -->
+    <script
+      defer
+      src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"
+    ></script>
+    <!--     PixiJS Renderer -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"
+    ></script>
+    <!--     PixiJS Live2D Plugin -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"
+    ></script>
+
+    <!--     Kalidokit Kinematic Solver -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/kalidokit@1.1/dist/kalidokit.umd.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <a id="home-icon"><i class="fas fa-home"></i></a>
+      <canvas id="live2d-avatar"></canvas>
+      <p id="status" style="display: none; color: #fff">Listenting ...</p>
+      <div id="chatbox">
+        <div id="messages"></div>
+        <div id="input-container">
+          <textarea
+            id="user-input"
+            placeholder="Type your message..."
+          ></textarea>
+          <div id="send-btn"><i class="fas fa-paper-plane"></i></div>
+          <div id="voice-btn"><i class="fas fa-microphone"></i></div>
+          <div id="stop-btn" style="display: none">
+            <i class="fa-solid fa-stop"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="chat.js"></script>
+  </body>
+</html>

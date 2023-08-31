@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+#vid {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+}
+
+#videos {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-player {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#user-2 {
+  display: none;
+}
+
+#controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1em;
+}
+
+.control-container {
+  background-color: rgb(179, 102, 249, 0.9);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-container:hover {
+  background-color: rgba(158, 83, 228, 0.9);
+}
+
+.control-container:active {
+  transform: translateY(4px);
+}
+
+.control-container img {
+  height: 30px;
+  width: 30px;
+}
+
+#leave-btn {
+  background-color: rgb(255, 80, 80, 1);
+}
+
+#mic-btn {
+  display: none;
+}
+
+#refresh-btn {
+  display: none;
+}
+
+#caption-btn {
+  display: none;
+}
+
+#transcript {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .control-container img {
+    height: 20px;
+    width: 20px;
+  }
+}
