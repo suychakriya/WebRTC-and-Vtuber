@@ -23,7 +23,7 @@ This project demonstrates the implmentation of Realtime Communication with WebXR
 
 To run the project, follow these steps:
 
-- Clone the repository: `https://github.com/ThornenSan/WebRTC-WebXR`
+- Clone the repository: `https://github.com/suychakriya/WebRTC-and-Vtuber`
 - Navigate to the project directory
 - Install packages: npm install
 - Run the project: npm run dev
